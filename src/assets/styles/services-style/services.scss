@@ -1,0 +1,53 @@
+//NULLING STYLES
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+//EVERYTHING STYLES
+
+.block-container {
+	width: 85%;
+	margin: 0 auto;
+	max-width: 1320px;
+}
+.nav-container {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1440px;
+}
+
+//MIXINS
+
+@mixin standartBlock($padding) {
+	width: 100%;
+	height: fit-content;
+	padding: $padding;
+}
+
+@mixin standartFlex($direction: row, $align: flex-start, $justify: flex-start) {
+	display: flex;
+	flex-direction: $direction;
+	align-items: $align;
+	justify-content: $justify;
+}
+
+//VARIABLES
+$roboto: 'Roboto', sans-serif;
+
+$px12: 12px;
+$px14: 14px;
+$px16: 16px;
+$px18: 18px;
+$px20: 20px;
+$px24: 24px;
+$px30: 30px;
+$px36: 36px;
+$px48: 48px;
+$px64: 64px;
+
+$lightorange: #ff7b52;
+$lightgray: #333;
+$white: white;
+$black: black;
