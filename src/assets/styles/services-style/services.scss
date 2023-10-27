@@ -18,6 +18,29 @@
 	max-width: 1440px;
 }
 
+.block-title-orange {
+	color: #ff7b52;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+}
+.block-subtitle {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 40px;
+}
+.block-text {
+	color: #333;
+	font-family: 'Roboto', sans-serif;
+	font-size: 30px;
+}
+
+.block-title-bg-gray {
+	font-size: 48px;
+	color: #000;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+}
 //MIXINS
 
 @mixin standartBlock($padding) {

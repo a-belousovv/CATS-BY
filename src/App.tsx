@@ -1,4 +1,6 @@
 //IMPORT BLOCKS
+import Combination from './blocks/Block-Combination/Combination'
+import Design from './blocks/Block-Design/Design'
 import Header from './blocks/Header/Header'
 import Navigation from './blocks/Navigation/Navigation'
 
@@ -9,6 +11,8 @@ function App() {
 		<main>
 			<Navigation />
 			<Header />
+			<Design />
+			<Combination />
 		</main>
 	)
 }
