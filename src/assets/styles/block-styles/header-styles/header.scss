@@ -15,8 +15,10 @@
 	}
 	&__box {
 		width: 55%;
-		@include standartFlex(column, flex-start, flex-start);
+		height: 100%;
+		@include standartFlex(column, flex-start, flex-end);
 		gap: 40px;
+		padding-top: 100px;
 		.header__title {
 			font-size: $px64;
 			font-weight: 600;

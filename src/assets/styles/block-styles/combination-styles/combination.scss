@@ -4,7 +4,7 @@
 	&__box {
 		width: 100%;
 		@include standartFlex(row, center, center);
-		background-color: #f5f5f5;
+		background-color: $blockBg;
 		border-radius: 30px;
 		.combination__item {
 			width: 100%;
@@ -39,6 +39,7 @@
 						.combination__choose_options {
 							padding: 2px;
 							@include standartFlex(row, center, center);
+							cursor: pointer;
 							&.active {
 								border: 2px solid black;
 								border-radius: 50%;

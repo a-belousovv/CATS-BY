@@ -1,21 +1,22 @@
 import React from 'react'
+import TitleOrange from '../../reused-components/TitleOrange/TitleOrange'
+import SubTitleGray from '../../reused-components/SubTitleGray/SubTitleGray'
+import TextGray from '../../reused-components/TextGray/TextGray'
 
-const Design = () => {
+const Design: React.FC = () => {
 	return (
 		<div className='design'>
 			<div className='block-container'>
 				<div className='design__box'>
 					<div className='design__content'>
-						<h2 className='design__title block-title-orange'>ДИЗАЙН</h2>
-						<h3 className='design__subtitle block-subtitle'>
-							Предмет искусства в вашем доме
-						</h3>
-						<p className='design__text block-text'>
-							Строгий и лаконичный скандинавский стиль порадует вашего
+						<TitleOrange text='ДИЗАЙН' />
+						<SubTitleGray text='Предмет искусства в вашем доме' />
+						<TextGray
+							text='Строгий и лаконичный скандинавский стиль порадует вашего
 							внутреннего эстета. Настоящий дуб, хлопковый канат,
 							гипоаллергенный фетр соответствуют духу времени — экологично,
-							натурально, долговечно.
-						</p>
+							натурально, долговечно.'
+						/>
 					</div>
 					<div className='design__img'>
 						<img src='/src/assets/pictures/design/design-item.jpg' alt='' />

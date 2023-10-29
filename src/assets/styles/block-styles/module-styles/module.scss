@@ -1,0 +1,15 @@
+.module-system {
+	@include standartBlock(0px 0px 0px 75px);
+	.module__box {
+		background-color: $blockBg;
+		width: 100%;
+		@include standartFlex(row, center, center);
+		gap: 40px;
+		padding: 0px 80px 0px 0px;
+		border-radius: 30px;
+		.module__content {
+			@include standartFlex(column, flex-start, flex-start);
+			gap: 20px;
+		}
+	}
+}

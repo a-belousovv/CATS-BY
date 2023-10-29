@@ -3,6 +3,7 @@ import {
 	CombinationArrayItem,
 	TreesandCablesItem,
 } from '../../@types/Combination/types'
+import TitleOrange from '../../reused-components/TitleOrange/TitleOrange'
 
 const Combination: React.FC = () => {
 	const [activeTree, setActiveTree] = useState(0)
@@ -81,9 +82,8 @@ const Combination: React.FC = () => {
 								<img src={findItem.src} alt='' />
 							</div>
 							<div className='combination__content'>
-								<h2 className='combination__title block-title-bg-gray'>
-									Комбинация для вашего интерьера
-								</h2>
+								<TitleOrange text='Комбинация для вашего интерьера' />
+
 								<div className='combination__choose_block'>
 									<h3 className='combination__choose_title'>
 										{findItem.treeTitle}
