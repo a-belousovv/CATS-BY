@@ -7,6 +7,9 @@
 
 //EVERYTHING STYLES
 
+html {
+	scroll-behavior: smooth;
+}
 .block-container {
 	width: 85%;
 	margin: 0 auto;
@@ -40,6 +43,15 @@
 	color: #000;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	display: none;
+	&::after {
+		font-size: 0px;
+		display: none;
+	}
 }
 //MIXINS
 
