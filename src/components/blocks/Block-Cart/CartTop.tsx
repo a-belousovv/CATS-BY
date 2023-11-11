@@ -21,6 +21,12 @@ const CartTop = () => {
 		0
 	)
 
+	const handleClick = () => {
+		if (cart.length != 0) {
+			window.scrollTo(0, 1050)
+		}
+	}
+
 	return (
 		<div className='cart-top'>
 			<div className='block-container'>
@@ -113,7 +119,7 @@ const CartTop = () => {
 								</h3>
 							</div>
 							<button
-								onClick={() => window.scrollTo(0, 1050)}
+								onClick={() => handleClick()}
 								className='cart-top__payment_button-accept'>
 								Перейти к оформлению
 							</button>

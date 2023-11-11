@@ -1,5 +1,3 @@
-import React from 'react'
-
 const ComplexItemSliderButtons = () => {
 	return (
 		<div className='complex-slider-buttons'>
