@@ -5,6 +5,10 @@
 		@include standartFlex(row, flex-start, center);
 		gap: 40px;
 		height: 459px;
+		@media (max-width: $media-m) {
+			height: auto;
+			@include standartFlex(column, flex-start, center);
+		}
 		.safely__header {
 			width: 50%;
 			height: 100%;
@@ -13,6 +17,10 @@
 			background-color: $blockBg;
 			padding: 38px 60px;
 			gap: 10px;
+			@media (max-width: $media-m) {
+				width: 100%;
+				padding: 18px 30px;
+			}
 			&_title {
 				color: #61c36b;
 				font-family: $roboto;
@@ -27,6 +35,10 @@
 			border-radius: 30px;
 			background-color: $blockBg;
 			padding: 38px 60px;
+			@media (max-width: $media-m) {
+				width: 100%;
+				padding: 18px 30px;
+			}
 		}
 	}
 }

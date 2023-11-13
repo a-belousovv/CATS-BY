@@ -25,6 +25,15 @@
 					font-weight: 700;
 					color: $black;
 					opacity: 0.2;
+					@media (max-width: $media-l) {
+						font-size: $px64;
+					}
+					@media (max-width: $media-m) {
+						font-size: $px48;
+					}
+					@media (max-width: $media-s) {
+						font-size: $px36;
+					}
 				}
 			}
 		}
@@ -32,10 +41,16 @@
 			width: 100%;
 			@include standartFlex(row, center, center);
 			gap: 30px;
+			@media (max-width: $media-m) {
+				@include standartFlex(column, flex-start, flex-start);
+			}
 			&_item {
 				width: 45%;
 				height: 100%;
 				@include standartFlex(column, flex-start, flex-start);
+				@media (max-width: $media-m) {
+					width: 100%;
+				}
 				.runline__item_title {
 					font-family: $roboto;
 					font-size: $px30;

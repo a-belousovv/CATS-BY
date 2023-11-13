@@ -4,6 +4,8 @@ import { ComplexItemsItem } from '../../../@types/redux/ComplexTypes/types'
 
 const initialState: CartInitialState = {
 	cart: [],
+	totalCount: 0,
+	totalSum: 0,
 }
 export const CartSlice = createSlice({
 	name: 'cart',
@@ -14,13 +16,7 @@ export const CartSlice = createSlice({
 				(obj) => obj.itemId == action.payload.itemId
 			)
 			if (findItem) {
-				if (
-					findItem.count == action.payload.count &&
-					(findItem.price == action.payload.price ||
-						findItem.priceDiscount == action.payload.priceDiscount) &&
-					findItem.title == action.payload.title &&
-					findItem.title == action.payload.title
-				) {
+				if (findItem.title == action.payload.title) {
 					findItem.count++
 				}
 			} else {
@@ -49,6 +45,12 @@ export const CartSlice = createSlice({
 				}
 			}
 		},
+		changeTotalCount: (state, action) => {
+			state.totalCount = action.payload
+		},
+		changeTotalSum: (state, action) => {
+			state.totalSum = action.payload
+		},
 	},
 })
 
@@ -57,5 +59,7 @@ export const {
 	incrementCartItem,
 	decrementCartItem,
 	removeCartItem,
+	changeTotalCount,
+	changeTotalSum,
 } = CartSlice.actions
 export default CartSlice.reducer

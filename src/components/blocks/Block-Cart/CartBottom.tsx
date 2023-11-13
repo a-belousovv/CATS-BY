@@ -1,6 +1,7 @@
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { Inputs } from '../../../@types/redux/Cart/types'
 import { useState } from 'react'
+import { useAppSelector } from '../../../redux/reduxHooks/hooks'
 
 const CartBottom = () => {
 	const {
@@ -12,9 +13,10 @@ const CartBottom = () => {
 
 	const [activeDelivery, setActiveDelivery] = useState('Доставка')
 	const [isAgree, setIsAgree] = useState(false)
+	const cart = useAppSelector((state) => state.cart.cart)
 	const onSubmit: SubmitHandler<Inputs> = (data) => {
 		if (isAgree) {
-			const newRequest = { ...data, activeDelivery }
+			const newRequest = { ...data, activeDelivery, items: cart }
 			console.log(newRequest)
 			reset()
 		}

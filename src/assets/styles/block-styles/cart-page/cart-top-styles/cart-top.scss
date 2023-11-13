@@ -1,3 +1,18 @@
+.cart {
+	width: 100%;
+	&-empty {
+		width: 100%;
+		@include standartFlex(column, center, center);
+		gap: 20px;
+		&__title {
+			font-family: $roboto;
+			font-size: $px48;
+		}
+		&__img {
+			width: 20%;
+		}
+	}
+}
 .cart-top {
 	@include standartBlock(45px 0px);
 	&__box {

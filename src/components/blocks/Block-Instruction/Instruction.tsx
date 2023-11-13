@@ -1,13 +1,6 @@
-import { useEffect, useState } from 'react'
 import TitleGray from '../../share/TitleCardsBgGray/TitleGray'
 
 const Instruction = () => {
-	const [windowScroll, setWindowScroll] = useState(0)
-	useEffect(() => {
-		window.addEventListener('scroll', () => {
-			setWindowScroll(window.scrollY)
-		})
-	}, [window.scrollY])
 	return (
 		<div className='instruction'>
 			<div className='block-container'>
@@ -16,23 +9,17 @@ const Instruction = () => {
 						<img
 							src='/pictures/instruction/instruction.png'
 							alt=''
-							className={`instruction__animation_img-instruction ${
-								windowScroll > 9950 ? 'active' : ''
-							}`}
+							className='instruction__animation_img-instruction'
 						/>
 						<img
 							src='/pictures/instruction/screwdriver.png'
 							alt=''
-							className={`instruction__animation_img-screwdriver ${
-								windowScroll > 9950 ? 'active' : ''
-							}`}
+							className='instruction__animation_img-screwdriver'
 						/>
 						<img
 							src='/pictures/instruction/wrench.png'
 							alt=''
-							className={`instruction__animation_img-wrench ${
-								windowScroll > 9950 ? 'active' : ''
-							}`}
+							className='instruction__animation_img-wrench'
 						/>
 						<div className='instruction__animation__box'>
 							<img

@@ -3,9 +3,6 @@ import React from 'react'
 const Header: React.FC = () => {
 	return (
 		<div className='header'>
-			<div className='header__bg'>
-				<img src='/backgrounds/header/header-bg.jpg' alt='' />
-			</div>
 			<div className='block-container'>
 				<div className='header__box'>
 					<h1 className='header__title'>

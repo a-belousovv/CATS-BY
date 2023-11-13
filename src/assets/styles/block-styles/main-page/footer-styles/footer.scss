@@ -21,6 +21,7 @@
 				width: 100%;
 				@include standartFlex(row, center, center);
 				gap: 40px;
+				flex-wrap: wrap;
 				.footer__items_item {
 					font-size: 18px;
 					font-weight: 400;
@@ -39,6 +40,10 @@
 		.footer__bottom {
 			width: 100%;
 			@include standartFlex(row, center, space-between);
+			@media (max-width: $media-m) {
+				@include standartFlex(column, center, center);
+				gap: 30px;
+			}
 			&-left {
 				@include standartFlex(row, center, flex-start);
 				gap: 30px;

@@ -13,10 +13,7 @@ const Comments: React.FC = () => {
 			<div className='block-container'>
 				<div className='comments__box'>
 					<div className='comments__items'>
-						<div
-							className={`comments__items_item ${
-								windowScroll > 8530 ? 'active' : ''
-							} `}>
+						<div className='comments__items_item '>
 							<img
 								src='/pictures/comments/comments-people-1.jpg'
 								alt=''
@@ -29,10 +26,7 @@ const Comments: React.FC = () => {
 								</h3>
 							</div>
 						</div>
-						<div
-							className={`comments__items_item ${
-								windowScroll > 8680 ? 'active' : ''
-							} `}>
+						<div className='comments__items_item '>
 							<img
 								src='/pictures/comments/comments-people-1.jpg'
 								alt=''
@@ -46,10 +40,7 @@ const Comments: React.FC = () => {
 								</h3>
 							</div>
 						</div>
-						<div
-							className={`comments__items_item ${
-								windowScroll > 8800 ? 'active' : ''
-							} `}>
+						<div className='comments__items_item '>
 							<img
 								src='/pictures/comments/comments-people-1.jpg'
 								alt=''

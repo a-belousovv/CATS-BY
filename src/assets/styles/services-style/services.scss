@@ -10,6 +10,19 @@
 html {
 	scroll-behavior: smooth;
 }
+
+img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+body {
+	&.hide {
+		overflow: hidden;
+	}
+}
+
 .block-container {
 	width: 85%;
 	margin: 0 auto;
@@ -31,11 +44,17 @@ html {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
 	font-size: 40px;
+	@media (max-width: 768px) {
+		font-size: 30px;
+	}
 }
 .block-text {
 	color: #333;
 	font-family: 'Roboto', sans-serif;
 	font-size: 30px;
+	@media (max-width: 768px) {
+		font-size: 18px;
+	}
 }
 
 .block-title-bg-gray {
@@ -43,6 +62,9 @@ html {
 	color: #000;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
+	@media (max-width: 768px) {
+		font-size: 30px;
+	}
 }
 
 .swiper-button-next,
@@ -87,3 +109,7 @@ $lightgray: #333;
 $white: white;
 $black: black;
 $blockBg: #f5f5f5;
+
+$media-s: 360px;
+$media-m: 1000px;
+$media-l: 1440px;

@@ -3,10 +3,18 @@
 	&__box {
 		width: 100%;
 		@include standartFlex(row, center, center);
+		@media (max-width: $media-m) {
+			@include standartFlex(column, center, flex-start);
+		}
 		.elements__content {
 			width: 40%;
 			@include standartFlex(column, flex-start, flex-start);
 			gap: 400px;
+			@media (max-width: $media-m) {
+				width: 100%;
+				@include standartFlex(column-reverse, flex-start, flex-start);
+				gap: 40px;
+			}
 			&_item {
 				width: 100%;
 				@include standartFlex(column, flex-start, flex-start);
@@ -27,6 +35,9 @@
 		.elements__imgs {
 			width: 50%;
 			@include standartFlex(column, flex-start, flex-start);
+			@media (max-width: $media-m) {
+				width: 100%;
+			}
 			&_rug {
 				position: sticky;
 				top: 30vh;

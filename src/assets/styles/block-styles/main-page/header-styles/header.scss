@@ -1,26 +1,25 @@
 .header {
-	@include standartBlock(60px 0px 500px 0px);
-	&__bg {
-		width: 100vw;
-		height: 100vh;
-		position: absolute;
-		top: 0%;
-		left: 0;
-		z-index: -1;
-		img {
-			width: 100%;
-			display: block;
-			height: 100%;
-		}
+	@include standartBlock(100px 0px 300px 0px);
+	overflow: hidden;
+	background-image: url('/backgrounds/header/header-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 80% 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	@media (max-width: $media-m) {
+		padding: 100px 0px;
 	}
 	&__box {
 		width: 55%;
 		height: 100%;
 		@include standartFlex(column, flex-start, flex-end);
 		gap: 40px;
-		padding-top: 100px;
+
 		.header__title {
-			font-size: $px64;
+			font-size: clamp($px24, 3vw, $px64);
 			font-weight: 600;
 			font-family: $roboto;
 			span {
@@ -28,7 +27,8 @@
 			}
 		}
 		.header__subtitle {
-			font-size: $px30;
+			font-size: clamp($px16, 3vw, $px30);
+
 			color: $lightgray;
 			font-family: $roboto;
 			font-weight: 500;
@@ -36,7 +36,7 @@
 		.header__button-choose {
 			background-color: $lightorange;
 			color: $white;
-			padding: 18px 27px;
+			padding: clamp(7px, 1vw, 18px) clamp(10px, 1vw, 27px);
 			font-size: $px18;
 			font-weight: 400;
 			font-family: $roboto;

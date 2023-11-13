@@ -4,7 +4,10 @@
 		width: 100%;
 		@include standartFlex(row, center, flex-end);
 		position: relative;
-
+		@media (max-width: $media-m) {
+			@include standartFlex(column, center, flex-end);
+			gap: 30px;
+		}
 		&::after {
 			content: '';
 			width: 110%;
@@ -16,12 +19,18 @@
 			bottom: 0;
 			transform: translateX(-50%);
 			border-radius: 30px;
+			@media (max-width: $media-m) {
+				height: 110%;
+			}
 		}
 		.social__content {
 			@include standartFlex(column, flex-start, flex-start);
 			gap: 20px;
 			width: 55%;
 			padding-top: 60px;
+			@media (max-width: $media-m) {
+				width: 100%;
+			}
 			&_text {
 				font-family: $roboto;
 				font-size: 20px;
@@ -45,6 +54,9 @@
 			}
 		}
 		.social__img {
+			@media (max-width: $media-m) {
+				width: 80%;
+			}
 			img {
 				display: block;
 				width: 100%;

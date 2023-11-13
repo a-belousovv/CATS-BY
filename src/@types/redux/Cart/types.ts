@@ -2,6 +2,8 @@ import { ComplexItemsItem } from '../ComplexTypes/types'
 
 export interface CartInitialState {
 	cart: ComplexItemsItem[]
+	totalCount: number
+	totalSum: number
 }
 
 export interface Inputs {
