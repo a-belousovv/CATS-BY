@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useAppSelector } from '../../../redux/reduxHooks/hooks'
+import { useAppDispatch, useAppSelector } from '../../../redux/reduxHooks/hooks'
 import { ComplexItemsItem } from '../../../@types/redux/ComplexTypes/types'
+import { setIsBurger } from '../../../redux/slices/Navigation/Navigation'
 
 const Navigation: React.FC = () => {
+	const dispatch = useAppDispatch()
 	const cart = useAppSelector((state) => state.cart.cart)
 
 	const totalCount = cart.reduce(
@@ -11,14 +13,13 @@ const Navigation: React.FC = () => {
 		0
 	)
 
-	const [isBurger, setIsBurger] = useState(true)
+	const isBurger = useAppSelector((state) => state.navigation.isBurger)
 	const [isOpenBurger, setIsOpenBurger] = useState(false)
-
 	useEffect(() => {
 		if (window.innerWidth < 1340) {
-			setIsBurger(true)
+			dispatch(setIsBurger(true))
 		} else {
-			setIsBurger(false)
+			dispatch(setIsBurger(false))
 		}
 	}, [window.innerWidth])
 

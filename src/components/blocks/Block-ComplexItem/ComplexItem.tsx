@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom'
 import { addNewCartItem } from '../../../redux/slices/Cart/CartSlice'
 import { ComplexItemsItem } from '../../../@types/redux/ComplexTypes/types'
 
+import { Swiper, SwiperSlide } from 'swiper/react'
+
+import 'swiper/css'
+
 const ComplexItem = () => {
 	const { id, itemId } = useParams()
 	const dispatch = useAppDispatch()
@@ -31,20 +35,36 @@ const ComplexItem = () => {
 										{findItem.title}
 									</h2>
 								</div>
-								<div className='complexItem__content'>
-									<div className='complexItem__content_slider'>
+
+								{window.innerWidth <= 1000 ? (
+									<Swiper className='complexItem__content_slider'>
 										{findItem.info.src.map((item, i) => {
 											return (
-												<div className='complex__slider_item' key={i}>
-													<img src={item} alt='' />
-												</div>
+												<SwiperSlide key={i}>
+													<div className='complex__slider_item'>
+														<img src={item} alt='' />
+													</div>
+												</SwiperSlide>
 											)
 										})}
+									</Swiper>
+								) : (
+									<div className='complexItem__content'>
+										<div className='complexItem__content_slider'>
+											{findItem.info.src.map((item, i) => {
+												return (
+													<div key={i} className='complexItem__slider_item'>
+														<img src={item} alt='' />
+													</div>
+												)
+											})}
+										</div>
+
+										<div className='complexItem__content_img'>
+											<img src={findItem.src} alt='' />
+										</div>
 									</div>
-									<div className='complexItem__content_img'>
-										<img src={findItem.src} alt='' />
-									</div>
-								</div>
+								)}
 								<div className='complexItem__content_characteristics'>
 									<h3 className='complexItem__characteristics_title'>
 										Характеристики
@@ -64,28 +84,43 @@ const ComplexItem = () => {
 								</div>
 								<div className='complexItem__content_info'>
 									<h3 className='complexItem__info_title'>Описание</h3>
-									<div className='complexItem__info_imgs'>
-										<div className='complexItem__img_left'>
-											<img src={findItem.info.src[0]} alt='' />
+									{window.innerWidth <= 1000 ? (
+										<Swiper className='complexItem__info_imgs'>
+											{findItem.info.src.map((item, i) => {
+												return (
+													<SwiperSlide key={i}>
+														<div className='complex__slider_item'>
+															<img src={item} alt='' />
+														</div>
+													</SwiperSlide>
+												)
+											})}
+										</Swiper>
+									) : (
+										<div className='complexItem__info_imgs'>
+											<div className='complexItem__img_left'>
+												<img src={findItem.info.src[0]} alt='' />
+											</div>
+											<div className='complexItem__img_right'>
+												<div className='complex__right_item two'>
+													<img src={findItem.info.src[1]} alt='' />
+													<img src={findItem.info.src[2]} alt='' />
+												</div>
+												<div className='complex__right_item three'>
+													<img src={findItem.info.src[3]} alt='' />
+													<img src={findItem.info.src[4]} alt='' />
+													<img src={findItem.info.src[5]} alt='' />
+												</div>
+												<div className='complex__right_item four'>
+													<img src={findItem.info.src[6]} alt='' />
+													<img src={findItem.info.src[7]} alt='' />
+													<img src={findItem.info.src[8]} alt='' />
+													<img src={findItem.info.src[9]} alt='' />
+												</div>
+											</div>
 										</div>
-										<div className='complexItem__img_right'>
-											<div className='complex__right_item two'>
-												<img src={findItem.info.src[1]} alt='' />
-												<img src={findItem.info.src[2]} alt='' />
-											</div>
-											<div className='complex__right_item three'>
-												<img src={findItem.info.src[3]} alt='' />
-												<img src={findItem.info.src[4]} alt='' />
-												<img src={findItem.info.src[5]} alt='' />
-											</div>
-											<div className='complex__right_item four'>
-												<img src={findItem.info.src[6]} alt='' />
-												<img src={findItem.info.src[7]} alt='' />
-												<img src={findItem.info.src[8]} alt='' />
-												<img src={findItem.info.src[9]} alt='' />
-											</div>
-										</div>
-									</div>
+									)}
+
 									<div className='complexItem__info_texts'>
 										{findItem.info.description.map((item, i) => {
 											return (
@@ -99,12 +134,15 @@ const ComplexItem = () => {
 							</div>
 							<div className='complexItem__right'>
 								<div className='complexItem__right_sidebar'>
-									<h3 className='complexItem__sidebar_title'>
-										{findItem.price}
-									</h3>
-									<h3 className='complexItem__sidebar_title-discount'>
-										{findItem.priceDiscount}
-									</h3>
+									<div className='complex__sidebar_header'>
+										<h3 className='complexItem__sidebar_title'>
+											{findItem.price}
+										</h3>
+										<h3 className='complexItem__sidebar_title-discount'>
+											{findItem.priceDiscount}
+										</h3>
+									</div>
+
 									<div className='complexItem__sidebar_isThere'>
 										<div className='complexItem__isThere_img'>
 											<img src='/icons/complexItem/isThere-true.svg' alt='' />

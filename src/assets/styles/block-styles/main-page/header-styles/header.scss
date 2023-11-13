@@ -1,16 +1,19 @@
 .header {
-	@include standartBlock(100px 0px 300px 0px);
+	@include standartBlock(100px 0px 200px 0px);
 	overflow: hidden;
-	background-image: url('/backgrounds/header/header-bg.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 80% 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1;
 	@media (max-width: $media-m) {
 		padding: 100px 0px;
+	}
+	&__bg {
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		background-image: url('/backgrounds/header/header-bg.jpg');
+		background-position: 80% 80%;
+		background-size: cover;
 	}
 	&__box {
 		width: 55%;

@@ -1,7 +1,9 @@
 .design {
-	@include standartBlock(700px 0px 100px 0px);
+	@include standartBlock(0px 0px 100px 0px);
+	position: relative;
+	z-index: -1;
 	@media (max-width: $media-m) {
-		padding-top: 500px;
+		padding: 100px 0px;
 	}
 	&__box {
 		@include standartFlex(row, flex-start, space-between);
