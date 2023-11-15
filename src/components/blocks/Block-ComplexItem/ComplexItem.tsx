@@ -1,7 +1,10 @@
 import { useParams } from 'react-router'
 import { useAppDispatch, useAppSelector } from '../../../redux/reduxHooks/hooks'
 import { Link } from 'react-router-dom'
-import { addNewCartItem } from '../../../redux/slices/Cart/CartSlice'
+import {
+	addNewCartItem,
+	decrementCartItem,
+} from '../../../redux/slices/Cart/CartSlice'
 import { ComplexItemsItem } from '../../../@types/redux/ComplexTypes/types'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -12,10 +15,18 @@ const ComplexItem = () => {
 	const { id, itemId } = useParams()
 	const dispatch = useAppDispatch()
 	const complexArray = useAppSelector((state) => state.complex.complexArray)
-
+	const cart = useAppSelector((state) => state.cart.cart)
+	const findCartItem = cart.find((obj) => obj.itemId == itemId)
 	const findArray = complexArray.find((obj) => obj.id == id)
-	const handleClick = (item: ComplexItemsItem) => {
-		dispatch(addNewCartItem(item))
+	const handleClick = (item: ComplexItemsItem, params: string) => {
+		switch (params) {
+			case 'add':
+				dispatch(addNewCartItem(item))
+				break
+			case 'remove':
+				dispatch(decrementCartItem(item.itemId))
+				break
+		}
 	}
 	if (findArray) {
 		const findItem = findArray.items.find((item) => item.itemId == itemId)
@@ -149,11 +160,25 @@ const ComplexItem = () => {
 										</div>
 										<h3 className='complexItem__isThere_title'>В наличии</h3>
 									</div>
-									<button
-										onClick={() => handleClick(findItem)}
-										className='complexItem__sidebar_cart-button'>
-										Добавить в корзину
-									</button>
+									{findCartItem ? (
+										<div className='complexItem__sidebar_buttonSomeItems'>
+											<div
+												onClick={() => handleClick(findItem, 'remove')}
+												className='complexItem__someItems_minus'></div>
+											<div className='complexItem__someItem_count'>
+												{findCartItem?.count} шт в корзине
+											</div>
+											<div
+												onClick={() => handleClick(findItem, 'add')}
+												className='complexItem__someItems_plus'></div>
+										</div>
+									) : (
+										<button
+											onClick={() => handleClick(findItem, 'add')}
+											className='complexItem__sidebar_cart-button'>
+											Добавить в корзину
+										</button>
+									)}
 									<div className='complexItem__sidebar_info'>
 										<div className='complexItem__info_item'>
 											<div className='complexItem__item_img'>

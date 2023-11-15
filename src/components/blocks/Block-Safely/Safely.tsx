@@ -10,15 +10,17 @@ const Safely: React.FC = () => {
 					<div className='safely__header'>
 						<div className='safely__header_img'>
 							<img src='/icons/safely/safely-icon.svg' alt='' />
-							<h4 className='safely__header_title'>ECO-FRIENDLY</h4>
+							<h4 className='safely__img_title'>ECO-FRIENDLY</h4>
 						</div>
-						<TitleGray text='Безопасно для природы и детей' />
+						<TitleGray
+							className='safely__header_title'
+							text='Безопасно для природы и детей'
+						/>
 					</div>
 					<div className='safely__content'>
 						<TextGray
-							text='Мы используем полностью био­раз­лагаемую упаковку. Когтеточку изготавливаем из натуральных материалов. Канат плетём из органического хлопка без пропиток и полиэстеровых микроволокон, наматываем без использования клея. Дуб покрываем «дышащими» растительными маслами и твёрдым воском.
-
-'
+							className='safely__content_text'
+							text='Мы используем полностью био­раз­лагаемую упаковку. Когтеточку изготавливаем из натуральных материалов. Канат плетём из органического хлопка без пропиток и полиэстеровых микроволокон, наматываем без использования клея. Дуб покрываем «дышащими» растительными маслами и твёрдым воском.'
 						/>
 					</div>
 				</div>

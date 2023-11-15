@@ -6,6 +6,10 @@
 		width: 40%;
 		@include standartFlex(column, center, center);
 		gap: 15px;
+		@media (max-width: $media-m) {
+			width: 100%;
+			max-width: 600px;
+		}
 		.cart__box_title {
 			font-family: $roboto;
 			font-size: $px36;
@@ -16,6 +20,9 @@
 			width: 90%;
 			@include standartFlex(column, center, flex-start);
 			gap: 20px;
+			@media (max-width: $media-m) {
+				width: 100%;
+			}
 			.cart__warning {
 				color: red;
 				opacity: 0.6;
@@ -48,12 +55,21 @@
 			}
 			.cart__box_details {
 				width: 90%;
+
 				@include standartFlex(row, flex-start, space-between);
+				@media (max-width: $media-m) {
+					width: 100%;
+					@include standartFlex(column, flex-start, space-between);
+					gap: 20px;
+				}
 				.cart__details_item {
 					width: 45%;
 					height: 100%;
 					@include standartFlex(column, flex-start, flex-start);
 					gap: 15px;
+					@media (max-width: $media-m) {
+						width: 100%;
+					}
 					.cart__item_title {
 						font-family: $roboto;
 						color: #5a5f6e;
@@ -134,6 +150,9 @@
 				width: 90%;
 				@include standartFlex(column, center, flex-start);
 				gap: 15px;
+				@media (max-width: $media-m) {
+					width: 100%;
+				}
 				.cart__comment_title {
 					font-family: $roboto;
 					color: #5a5f6e;
@@ -158,6 +177,9 @@
 					.cart__agreement_header {
 						@include standartFlex(row, center, flex-start);
 						gap: 15px;
+						@media (max-width: $media-m) {
+							@include standartFlex(column, center, flex-start);
+						}
 						.cart__agreement_button {
 							width: 15px;
 							height: 15px;

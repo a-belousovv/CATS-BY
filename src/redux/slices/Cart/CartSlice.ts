@@ -16,11 +16,13 @@ export const CartSlice = createSlice({
 				(obj) => obj.itemId == action.payload.itemId
 			)
 			if (findItem) {
-				if (findItem.title == action.payload.title) {
-					findItem.count++
+				if (findItem.count < 10) {
+					if (findItem.title == action.payload.title) {
+						findItem.count++
+					}
 				}
 			} else {
-				const newCartItem = { ...action.payload }
+				const newCartItem = { ...action.payload, count: 1 }
 				state.cart.unshift(newCartItem)
 			}
 		},
@@ -40,8 +42,11 @@ export const CartSlice = createSlice({
 			const findItem = state.cart.find((obj) => obj.itemId == action.payload)
 
 			if (findItem) {
-				if (findItem.count > 1) {
+				if (findItem.count >= 1) {
 					findItem.count--
+				}
+				if (findItem.count == 0) {
+					state.cart = state.cart.filter((obj) => obj.itemId !== action.payload)
 				}
 			}
 		},

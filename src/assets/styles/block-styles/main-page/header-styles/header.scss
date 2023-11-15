@@ -1,12 +1,14 @@
 .header {
-	@include standartBlock(100px 0px 200px 0px);
+	@include standartBlock(40px 0px 200px 0px);
 	overflow: hidden;
 	@media (max-width: $media-m) {
 		padding: 100px 0px;
 	}
 	&__bg {
 		width: 100vw;
-		height: 100vh;
+		height: 110vh;
+		min-height: 500px;
+		max-height: 600px;
 		position: absolute;
 		top: 0;
 		left: 0;

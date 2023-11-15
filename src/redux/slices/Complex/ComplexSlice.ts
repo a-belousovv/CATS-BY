@@ -12,7 +12,7 @@ const initialState: ComplexInitialState = {
 			items: [
 				{
 					itemId: 'first',
-					count: 1,
+					count: 0,
 					src: '/pictures/complex/item1.jpg',
 					price: 19.999,
 					priceDiscount: 20.999,
@@ -38,7 +38,7 @@ const initialState: ComplexInitialState = {
 				},
 				{
 					itemId: 'second',
-					count: 1,
+					count: 0,
 					src: '/pictures/complex/item1.jpg',
 					price: 19.999,
 					priceDiscount: 20.999,
@@ -64,7 +64,7 @@ const initialState: ComplexInitialState = {
 				},
 				{
 					itemId: 'third',
-					count: 1,
+					count: 0,
 					src: '/pictures/complex/item1.jpg',
 					price: 19.999,
 					priceDiscount: 20.999,
@@ -99,7 +99,7 @@ const initialState: ComplexInitialState = {
 			items: [
 				{
 					itemId: 'first',
-					count: 1,
+					count: 0,
 					src: '/pictures/complex/item2.jpg',
 					price: 19.999,
 					priceDiscount: 20.999,
@@ -125,7 +125,7 @@ const initialState: ComplexInitialState = {
 				},
 				{
 					itemId: 'second',
-					count: 1,
+					count: 0,
 					src: '/pictures/complex/item2.jpg',
 					price: 19.999,
 					priceDiscount: 20.999,
@@ -151,7 +151,7 @@ const initialState: ComplexInitialState = {
 				},
 				{
 					itemId: 'third',
-					count: 1,
+					count: 0,
 					src: '/pictures/complex/item2.jpg',
 					price: 19.999,
 					priceDiscount: 20.999,
@@ -186,7 +186,7 @@ const initialState: ComplexInitialState = {
 			items: [
 				{
 					itemId: 'first',
-					count: 1,
+					count: 0,
 					src: '/pictures/complex/item3.jpg',
 					price: 19.999,
 					priceDiscount: 20.999,
@@ -212,7 +212,7 @@ const initialState: ComplexInitialState = {
 				},
 				{
 					itemId: 'second',
-					count: 1,
+					count: 0,
 					src: '/pictures/complex/item3.jpg',
 					price: 19.999,
 					priceDiscount: 20.999,
@@ -238,7 +238,7 @@ const initialState: ComplexInitialState = {
 				},
 				{
 					itemId: 'third',
-					count: 1,
+					count: 0,
 					src: '/pictures/complex/item3.jpg',
 					price: 19.999,
 					priceDiscount: 20.999,
@@ -273,7 +273,7 @@ const initialState: ComplexInitialState = {
 			items: [
 				{
 					itemId: 'first',
-					count: 1,
+					count: 0,
 					src: '/pictures/complex/item4.jpg',
 					price: 19.999,
 					priceDiscount: 20.999,
@@ -299,7 +299,7 @@ const initialState: ComplexInitialState = {
 				},
 				{
 					itemId: 'second',
-					count: 1,
+					count: 0,
 					src: '/pictures/complex/item4.jpg',
 					price: 19.999,
 					priceDiscount: 20.999,
@@ -325,7 +325,7 @@ const initialState: ComplexInitialState = {
 				},
 				{
 					itemId: 'third',
-					count: 1,
+					count: 0,
 					src: '/pictures/complex/item4.jpg',
 					price: 19.999,
 					priceDiscount: 20.999,
@@ -360,7 +360,7 @@ const initialState: ComplexInitialState = {
 			items: [
 				{
 					itemId: 'first',
-					count: 1,
+					count: 0,
 					src: '/pictures/complex/item5.jpg',
 					price: 19.999,
 					priceDiscount: 20.999,
@@ -386,7 +386,7 @@ const initialState: ComplexInitialState = {
 				},
 				{
 					itemId: 'second',
-					count: 1,
+					count: 0,
 					src: '/pictures/complex/item5.jpg',
 					price: 19.999,
 					priceDiscount: 20.999,
@@ -412,7 +412,7 @@ const initialState: ComplexInitialState = {
 				},
 				{
 					itemId: 'third',
-					count: 1,
+					count: 0,
 					src: '/pictures/complex/item5.jpg',
 					price: 19.999,
 					priceDiscount: 20.999,
@@ -447,7 +447,7 @@ const initialState: ComplexInitialState = {
 			items: [
 				{
 					itemId: 'first',
-					count: 1,
+					count: 0,
 					src: '/pictures/complex/item6.jpg',
 					price: 19.999,
 					priceDiscount: 20.999,
@@ -473,7 +473,7 @@ const initialState: ComplexInitialState = {
 				},
 				{
 					itemId: 'second',
-					count: 1,
+					count: 0,
 					src: '/pictures/complex/item6.jpg',
 					price: 19.999,
 					priceDiscount: 20.999,
@@ -499,7 +499,7 @@ const initialState: ComplexInitialState = {
 				},
 				{
 					itemId: 'third',
-					count: 1,
+					count: 0,
 					src: '/pictures/complex/item6.jpg',
 					price: 19.999,
 					priceDiscount: 20.999,
@@ -550,7 +550,6 @@ const initialState: ComplexInitialState = {
 			src: '/pictures/combination/inputs/rope-black.png',
 		},
 	],
-
 	activeMaterial: 'input-oak-natural',
 	activeCabel: 'input-roke-white',
 }

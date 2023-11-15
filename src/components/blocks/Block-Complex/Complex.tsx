@@ -74,7 +74,8 @@ const Complex: React.FC = () => {
 									<Link
 										to={`/${findArray.id}/${item.itemId}`}
 										className='complex__items_item'
-										key={item.itemId}>
+										key={item.itemId}
+										onClick={() => window.scrollTo(0, 0)}>
 										<div className='complex__item_img'>
 											<img src={item.src} alt='' />
 										</div>
