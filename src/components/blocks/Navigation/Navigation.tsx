@@ -62,7 +62,7 @@ const Navigation: React.FC = () => {
 								<div className='nav__header_right'></div>
 							</div>
 							<div className='nav__content_items'>
-								<Link to='/' className='nav__items_item'>
+								<Link to='/catalog' className='nav__items_item'>
 									Каталог
 								</Link>
 								<Link to='/' className='nav__items_item'>
@@ -100,7 +100,9 @@ const Navigation: React.FC = () => {
 				) : (
 					<div className='nav__box'>
 						<div className='nav__links'>
-							<h4 className='nav__links_item'>Каталог</h4>
+							<Link to='/catalog' className='nav__links_item'>
+								Каталог
+							</Link>
 							<h4 className='nav__links_item'>Галерея</h4>
 							<h4 className='nav__links_item'>Вопрос-ответ</h4>
 							<h4 className='nav__links_item'>Гарантия</h4>

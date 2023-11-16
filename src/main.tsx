@@ -6,6 +6,7 @@ import { store } from './redux/store'
 
 import ComplexItemPage from './pages/ComplexItemPage/ComplexItemPage'
 import CartPage from './pages/CartPage/CartPage'
+import CatalogPage from './pages/CatalogPage/CatalogPage'
 
 const router = createBrowserRouter([
 	{
@@ -13,12 +14,16 @@ const router = createBrowserRouter([
 		element: <MainPage />,
 	},
 	{
-		path: '/:id/:itemId',
+		path: ':category/:id/:itemId',
 		element: <ComplexItemPage />,
 	},
 	{
 		path: '/cart',
 		element: <CartPage />,
+	},
+	{
+		path: '/catalog',
+		element: <CatalogPage />,
 	},
 ])
 ReactDOM.createRoot(document.getElementById('root')!).render(

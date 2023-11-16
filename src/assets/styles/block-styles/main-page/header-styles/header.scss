@@ -14,8 +14,12 @@
 		left: 0;
 		z-index: -1;
 		background-image: url('/backgrounds/header/header-bg.jpg');
-		background-position: 100%;
+		background-position: 80% 40%;
 		background-size: cover;
+		@media (max-width: $media-m) {
+			background-position: 70%;
+			background-repeat: no-repeat;
+		}
 	}
 	&__box {
 		width: 55%;

@@ -3,6 +3,7 @@ import ComplexSlice from './slices/Complex/ComplexSlice'
 import CombinationSlice from './slices/Combination/CombinationSlice'
 import CartSlice from './slices/Cart/CartSlice'
 import NavigationSlice from './slices/Navigation/Navigation'
+import CatalogSlice from './slices/Catalog/CatalogSlice'
 
 export const store = configureStore({
 	reducer: {
@@ -10,6 +11,7 @@ export const store = configureStore({
 		combination: CombinationSlice,
 		cart: CartSlice,
 		navigation: NavigationSlice,
+		catalog: CatalogSlice,
 	},
 })
 

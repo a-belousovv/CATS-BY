@@ -1,5 +1,4 @@
 export interface ComplexInitialState {
-	complexArray: ComplexArrayItem[]
 	materialArray: MaterialArrayItem[]
 	cabelArray: MaterialArrayItem[]
 
